@@ -164,3 +164,54 @@ body {
 
   transform: scale(1.2);
 }
+@media (max-width: 768px) {
+  .main-container {
+    height: auto;
+    padding: 20px 10px;
+  }
+
+  .inner-container {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+
+  .left-section, .right-section {
+    flex: none;
+    width: 100%;
+  }
+
+  .left-section {
+    height: 300px;
+    justify-content: flex-start;
+    padding-top: 40px;
+  }
+
+  .circle-img {
+    position: static;
+    margin: 0 auto;
+  }
+
+  .content {
+    position: static;
+    transform: none;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .navbar {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .navbar ul {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .icons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
