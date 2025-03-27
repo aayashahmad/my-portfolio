@@ -164,6 +164,152 @@ body {
 
   transform: scale(1.2);
 }
+/* responsive ++++++++++++++++++++++++++++++++++++++++*/
+/* === 1500px and below (Large Desktops) === */
+@media screen and (max-width: 1500px) {
+  .inner-container {
+    width: 90%;
+  }
+
+  .content h1 {
+    font-size: 36px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .circle-img {
+    left: 70%;
+  }
+}
+/* === 1300px and below (Large Laptops / Medium Screens) === */
+@media screen and (max-width: 1300px) {
+  .inner-container {
+    width: 95%;
+    padding: 30px;
+  }
+
+  .content h1 {
+    font-size: 34px;
+  }
+
+  .subtitle {
+    font-size: 17px;
+  }
+
+  .navbar ul {
+    gap: 25px;
+  }
+
+  .circle-img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .inner-circle {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+
+/* === 1200px and below (Laptops) === */
+@media screen and (max-width: 1200px) {
+  .inner-container {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+  }
+
+  .left-section {
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px;
+    height: auto;
+  }
+
+  .circle-img {
+    position: static;
+    margin: 0 auto;
+  }
+
+  .brand {
+    position: static;
+    margin-top: 20px;
+    font-size: 22px;
+  }
+
+  .right-section {
+    padding: 30px;
+  }
+
+  .navbar {
+    justify-content: center;
+  }
+
+  .navbar ul {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .content {
+    position: static;
+    transform: none;
+    /* text-align: center; */
+    margin-top: 30px;
+  }
+
+  .download-btn {
+    padding: 10px 25px;
+  }
+}
+
+/* === 992px and below (Tablets) === */
+@media screen and (max-width: 992px) {
+  .circle-img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .inner-circle {
+    width: 180px;
+    height: 180px;
+  }
+
+  .content h1 {
+    font-size: 30px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .navbar a {
+    font-size: 15px;
+  }
+}
+
+/* === 768px and below (Mini Tablets) === */
+/* @media screen and (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .content h1 {
+    font-size: 26px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .download-btn {
+    font-size: 14px;
+    padding: 8px 20px;
+  }
+} */
 @media (max-width: 768px) {
   .main-container {
     height: auto;
@@ -196,7 +342,7 @@ body {
     position: static;
     transform: none;
     padding: 20px 0;
-    text-align: center;
+    /* text-align: center; */
   }
 
   .navbar {
@@ -213,5 +359,42 @@ body {
   .icons {
     justify-content: center;
     flex-wrap: wrap;
+  }
+}
+
+
+/* === 576px and below (Phones) === */
+@media screen and (max-width: 576px) {
+  .circle-img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .inner-circle {
+    width: 140px;
+    height: 140px;
+  }
+
+  .brand {
+    font-size: 18px;
+  }
+
+  .content h1 {
+    font-size: 22px;
+  }
+
+  .navbar .btn,
+  .navbar a {
+    font-size: 14px;
+  }
+
+  .icons {
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .icons a {
+    font-size: 18px;
   }
 }

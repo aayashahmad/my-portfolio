@@ -55,7 +55,7 @@ function App() {
                 {/* <li><Link className="btn" to="/contact">Contact Me</Link></li>  */}
                 <li>
                   <Link className="btn" to="/home">
-                <Route path="/skills" element={<Skills />} />
+               
                     Home
                   </Link>
                 </li>
@@ -72,6 +72,7 @@ function App() {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/experience" element={<Experience />} />
                 <Route path="/projects" element={<Projects />} />
+                <Route path="/skills" element={<Skills />} />
               </Routes>
               <a
                 href="https://aayashahmad.github.io/my-portfolio/aayash_CV.pdf"
