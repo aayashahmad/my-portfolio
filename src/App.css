@@ -1,38 +1,166 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #af81d0, #984ad0ed,#750bc1ed);
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-container{
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.inner-container {
+  display: flex;
+  height: 90%;
+  width: 80%;
+  
+  box-shadow: 0 0 40px rgba(0,0,0,0.1);
+}
+
+.left-section {
+  background-color: #6a0dad;
+  flex: 1;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: column;
+  position: relative;
+}
+
+.circle-img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: #fff;
+  padding: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  position: absolute;
+  right: 0;
+  left: 71%;
+}
+.inner-circle{
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  background: #6a0dad;
+  padding: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+ 
+
+}
+
+.circle-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.brand {
+  position: absolute;
+  top: 40px;
+  left: 20px;
   color: white;
+  font-size: 18px;
 }
 
-.App-link {
-  color: #61dafb;
+.right-section {
+  background-color: white;
+  flex: 2;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar .btn {
+  background: #6a0dad;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+}
+.nav-link:hover
+{
+  color: #6a0dad;
+}
+
+/* .navbar a:hover {
+ color:#fff
+} */
+
+.content {
+  position: absolute;
+  top: 54%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+}
+
+.content h1 {
+  font-size: 40px;
+  color: #333;
+}
+
+.subtitle {
+  color: #555;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  padding: 2px;
+}
+
+.download-btn {
+  margin-top: 10px;
+  display: inline-block;
+  padding: 12px 25px;
+  background: #6a0dad;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.icons {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+.icons a {
+  font-size: 22px;
+  color: #6a0dad;
+  transition: transform 0.3s;
+}
+
+.icons a:hover {
+
+  transform: scale(1.2);
 }
