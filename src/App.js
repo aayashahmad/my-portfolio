@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import SplashCursor from './components/ui/splashCursor.js'
 
 import Home from "./components/home";
 import About from "./components/About/about";
@@ -10,21 +11,26 @@ import Contact from "./components/contact";
 import Skills from "./components/Skills/skills";
 import Experience from "./components/Experience/experience";
 import Projects from "./components/myProjects/projects";
+import TrueFocus from "./components/ui/textFocus/trueFocus";
 
 function App() {
   return (
     <Router>
       <div className="main-container">
         <div className="inner-container">
+     
           <div className="left-section">
+       
             <div className="circle-img">
               <div className="inner-circle">
                 <img
+                  manualMode={false}
                   src={`${process.env.PUBLIC_URL}/ayash.jpeg`}
                   alt="Profile"
                 />
               </div>
             </div>
+          
             <h3 className="brand">Aayash Ahmad</h3>
           </div>
 
@@ -55,7 +61,6 @@ function App() {
                 {/* <li><Link className="btn" to="/contact">Contact Me</Link></li>  */}
                 <li>
                   <Link className="btn" to="/home">
-               
                     Home
                   </Link>
                 </li>
@@ -126,6 +131,7 @@ function App() {
             </div>
           </div>
         </div>
+        <SplashCursor />
       </div>
     </Router>
   );

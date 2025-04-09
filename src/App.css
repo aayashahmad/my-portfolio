@@ -34,6 +34,10 @@ body {
   flex-direction: column;
   position: relative;
 }
+.text-focus{
+  position: absolute;
+  top:30px;
+}
 
 .circle-img {
   width: 250px;
@@ -120,7 +124,7 @@ body {
 .content {
   position: absolute;
   top: 54%;
-  left: 55%;
+  left: 57%;
   transform: translate(-50%, -50%);
 }
 
@@ -223,7 +227,7 @@ body {
   }
 
   .left-section {
-    flex-direction: row;
+    /* flex-direction: row; */
     justify-content: center;
     padding: 20px;
     height: auto;
@@ -256,13 +260,23 @@ body {
   .content {
     position: static;
     transform: none;
-    /* text-align: center; */
+    text-align: center;
     margin-top: 30px;
   }
 
   .download-btn {
     padding: 10px 25px;
   }
+}
+@media screen and (max-width: 1199px) {
+  .icons {
+    margin-top: 30px;
+    display: flex
+;
+    /* align-items: center; */
+    justify-content: center;
+    gap: 20px;
+}
 }
 
 /* === 992px and below (Tablets) === */
@@ -288,6 +302,7 @@ body {
   .navbar a {
     font-size: 15px;
   }
+ 
 }
 
 /* === 768px and below (Mini Tablets) === */
@@ -377,6 +392,7 @@ body {
 
   .brand {
     font-size: 18px;
+    padding: 10px;
   }
 
   .content h1 {
