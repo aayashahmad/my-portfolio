@@ -32,6 +32,7 @@ function App() {
     <Router>
       <div className="main-container">
         <div className="inner-container">
+        <AIAssistButton  />
      
           <div className="left-section">
        
@@ -158,15 +159,18 @@ function App() {
                 </a>
                 {/* <ConfettiButton >Tab me!</ConfettiButton> */}
               </div>
+           
             </div>
+          
           </div>
-        </div>
-        <AIAssistButton 
-        />
         
+        </div>
+        
+      
         <SplashCursor />
         
       </div>
+     
     </Router>
   );
 }
