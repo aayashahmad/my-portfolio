@@ -10,11 +10,10 @@ const AIAssistButton = () => {
     <div style={{ position: 'fixed', bottom: '20px', right: '20px', zIndex: 1000 }}>
       <Tooltip title="AI Assistant" placement="left">
         <Button
-          variant="contained"
-          color="primary"
           onClick={() => setOpenChat(!openChat)}
           style={{
             backgroundColor: '#6a0dad',
+            color: '#fff',
             borderRadius: '50%',
             minWidth: '60px',
             height: '60px',
