@@ -128,7 +128,8 @@ const AIAssistChat = ({ onClose }) => {
             {isLoading && (
               <ListItem>
                 <CircularProgress size={24} sx={{ mr: 2 }} />
-                <ListItemText primary="AI is thinking..." />
+                <ListItemText primary="Aayash's AI is thinking 🤔" />
+
               </ListItem>
             )}
             <div ref={messagesEndRef} />
