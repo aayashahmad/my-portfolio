@@ -38,6 +38,9 @@ body {
   position: absolute;
   top:30px;
 }
+button {
+  margin-top: 20px;
+}
 
 .circle-img {
   width: 250px;
