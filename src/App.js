@@ -12,8 +12,22 @@ import Skills from "./components/Skills/skills";
 import Experience from "./components/Experience/experience";
 import Projects from "./components/myProjects/projects";
 import TrueFocus from "./components/ui/textFocus/trueFocus";
+import { ConfettiButton } from './components/ui/ConfettiButton.js';
+import AIAssistButton from './components/aiAgent/aiAssistAgent.js';
+
 
 function App() {
+  const handleDownload = () => {
+    setTimeout(() => {
+      const link = document.createElement("a");
+      link.href = "https://aayashahmad.github.io/my-portfolio/aayash_CV.pdf";
+      link.download = "aayash_CV.pdf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }, 2000);
+  };
+  
   return (
     <Router>
       <div className="main-container">
@@ -29,6 +43,7 @@ function App() {
                   alt="Profile"
                 />
               </div>
+              
             </div>
           
             <h3 className="brand">Aayash Ahmad</h3>
@@ -60,11 +75,16 @@ function App() {
 
                 {/* <li><Link className="btn" to="/contact">Contact Me</Link></li>  */}
                 <li>
+               
                   <Link className="btn" to="/home">
+               
                     Home
+                   
                   </Link>
+                
                 </li>
               </ul>
+            
             </nav>
 
             <div className="content">
@@ -79,15 +99,24 @@ function App() {
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/skills" element={<Skills />} />
               </Routes>
+            <ConfettiButton>
               <a
+      onClick={handleDownload}
+      className="download-btn bg-blue-500 text-white "
+    >
+      Download CV
+    </a>
+    </ConfettiButton>
+              {/* <a
+            
                 href="https://aayashahmad.github.io/my-portfolio/aayash_CV.pdf"
                 className="download-btn"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Download CV
-              </a>
-
+              </a> */}
+             
               <div className="icons">
                 <a
                   href="https://github.com/aayashahmad"
@@ -127,11 +156,16 @@ function App() {
                 <a href="mailto:bhatashu666@gmail.com">
                   <i className="fas fa-envelope"></i>
                 </a>
+                {/* <ConfettiButton >Tab me!</ConfettiButton> */}
               </div>
             </div>
           </div>
         </div>
+        <AIAssistButton 
+        />
+        
         <SplashCursor />
+        
       </div>
     </Router>
   );
