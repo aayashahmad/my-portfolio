@@ -14,6 +14,7 @@ const AIAssistButton = () => {
           color="primary"
           onClick={() => setOpenChat(!openChat)}
           style={{
+            backgroundColor: '#6a0dad',
             borderRadius: '50%',
             minWidth: '60px',
             height: '60px',

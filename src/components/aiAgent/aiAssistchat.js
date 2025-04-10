@@ -98,9 +98,12 @@ const AIAssistChat = ({ onClose }) => {
         flexDirection: 'column',
         zIndex: 9999
       }}>
-        <Box display="flex" justifyContent="space-between" alignItems="center" p={2} bgcolor="primary.main" color="white">
+        <Box display="flex" justifyContent="space-between" alignItems="center" p={2} sx={{ bgcolor: '#6a0dad', color: 'white' }}>
           <Typography variant="h6">AI Assistant</Typography>
-          <IconButton onClick={onClose} color="inherit">
+          <IconButton onClick={onClose} sx={{
+  background: 'linear-gradient(90deg, #6a0dad 0%, #9b30ff 100%)',
+  color: 'white'
+}}>
             <CloseIcon />
           </IconButton>
         </Box>
@@ -114,7 +117,7 @@ const AIAssistChat = ({ onClose }) => {
                 mb: 1
               }}>
                 <ListItemAvatar>
-                  <Avatar sx={{ bgcolor: message.sender === 'ai' ? 'primary.main' : 'grey.500' }}>
+                  <Avatar sx={{ bgcolor: message.sender === 'ai' ? '#6a0dad' : 'grey.500' }}>
                     {message.sender === 'ai' ? 'AI' : 'You'}
                   </Avatar>
                 </ListItemAvatar>
@@ -129,7 +132,6 @@ const AIAssistChat = ({ onClose }) => {
               <ListItem>
                 <CircularProgress size={24} sx={{ mr: 2 }} />
                 <ListItemText primary="Aayash's AI is thinking 🤔" />
-
               </ListItem>
             )}
             <div ref={messagesEndRef} />
@@ -149,10 +151,9 @@ const AIAssistChat = ({ onClose }) => {
             maxRows={4}
           />
           <IconButton
-            color="primary"
             onClick={handleSend}
             disabled={!input.trim() || isLoading}
-            sx={{ ml: 1 }}
+            sx={{ ml: 1, bgcolor: '#6a0dad', color: '#fff', '&:hover': { bgcolor: '#5c0bb8' } }}
           >
             {isLoading ? <CircularProgress size={24} /> : <SendIcon />}
           </IconButton>
