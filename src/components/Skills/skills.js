@@ -1,19 +1,26 @@
-import React from 'react';
-import './skills.css';
+import React from "react";
+import Reveal, { SectionHeader } from "../ui/Reveal";
+import { skills } from "../../data/profile";
 
-function Home() {
-  return <div className="skills">
-     
-          <h3>Skills</h3>
-          <ul className="skills-list">
-            <li>Front-End Development (HTML, CSS, JavaScript)</li>
-            <li>Responsive Design</li>
-            <li>React.js</li>
-            <li>Version Control (Git/GitHub)</li>
-            <li>Testing & Debugging</li>
-          </ul>
-      
-  </div>
+export default function Skills() {
+  return (
+    <section className="section" id="skills">
+      <div className="container">
+        <SectionHeader index="04" eyebrow="Skills" title={<>Tools I <em>use</em></>} />
+
+        <div className="skills">
+          {skills.map((g, i) => (
+            <Reveal key={g.group} delay={i * 0.05} className="skill-row">
+              <h3 className="mono">{g.group}</h3>
+              <div className="tags">
+                {g.items.map((s) => (
+                  <span key={s} className="tag tag--lg">{s}</span>
+                ))}
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }
-
-export default Home;
