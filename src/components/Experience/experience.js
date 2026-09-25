@@ -1,33 +1,51 @@
-import React from 'react';
-import './experience.css';
+import React from "react";
+import Reveal, { SectionHeader } from "../ui/Reveal";
+import { experience } from "../../data/profile";
 
-const Experience = () => {
-  const styles = {
-  
-  
-    // text: {
-    //   marginBottom: '20px',
-     
-    // },
-  };
-
+export default function Experience() {
   return (
-    <div>
-    <section className="experience">
-    <h3 >Experience</h3>
-    <div className='exp'>
-      <h4 className={styles.text}>Octanet Services Pvt Ltd.</h4>
-      <p className="date">Dec 2023 - Jan 2024</p>
-      <p className="position">Web Development Intern</p>
-      <ul className='exp-list'>
-        <li>Created responsive web pages with HTML,<br/> CSS, and JavaScript</li>
-        <li>Fixed layout and design issues</li>
-        <li>Collaborated on projects via Git</li>
-      </ul>
-    </div>
-  </section>
-  </div>
-  );
-};
+    <section className="section" id="experience">
+      <div className="container">
+        <SectionHeader index="02" eyebrow="Experience" title={<>Where I've <em>worked</em></>} />
 
-export default Experience;
+        <ol className="jobs">
+          {experience.map((job) => (
+            <Reveal as="li" key={job.company} className="job">
+              <div className="job__side">
+                <span className="mono">{job.period}</span>
+                {job.current && (
+                  <span className="status">
+                    <span className="status__dot" /> Current
+                  </span>
+                )}
+              </div>
+              <div className="job__main">
+                <h3>
+                  {job.role}{" "}
+                  <span className="job__at">
+                    at{" "}
+                    {job.href ? (
+                      <a href={job.href} target="_blank" rel="noreferrer">{job.company}</a>
+                    ) : (
+                      job.company
+                    )}
+                  </span>
+                </h3>
+                <ul className="job__points">
+                  {job.points.map((p) => (
+                    <li key={p}>{p}</li>
+                  ))}
+                </ul>
+                <div className="tags">
+                  {job.tags.map((t) => (
+                    <span key={t} className="tag">{t}</span>
+                  ))}
+                </div>
+              </div>
+            </Reveal>
+          ))}
+        </ol>
+      </div>
+    </section>
+  );
+}
