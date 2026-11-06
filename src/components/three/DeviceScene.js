@@ -9,6 +9,7 @@ import { RoomEnvironment } from "three/examples/jsm/environments/RoomEnvironment
 
 const base = process.env.PUBLIC_URL;
 const SCREENS = [
+  { desktop: `${base}/projects/quran-reel-maker.jpg`, mobile: `${base}/projects/quran-reel-maker-mobile.jpg` },
   { desktop: `${base}/projects/ai-security-scanner.jpg`, mobile: `${base}/projects/ai-security-scanner-mobile.jpg` },
   { desktop: `${base}/projects/ricky-restaurants.jpg`, mobile: `${base}/projects/ricky-restaurants-mobile.jpg` },
 ];

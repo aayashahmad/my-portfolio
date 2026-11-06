@@ -63,6 +63,17 @@ export const experience = [
 
 export const projects = [
   {
+    title: "Quran Reel Maker",
+    kind: "Quran video generator",
+    description:
+      "Pick a surah and ayat and it makes a vertical reel: Alafasy's recitation with each Arabic word highlighted as it's recited, plus a translation in one of 46+ languages. Free, no sign-up. The same code posts two YouTube Shorts every day.",
+    stack: ["Python", "Flask", "Pillow", "FFmpeg", "YouTube API"],
+    repo: "https://github.com/aayashahmad/Quran_Reel_Maker",
+    live: "https://quranreelmaker.xyz",
+    image: `${process.env.PUBLIC_URL}/projects/quran-reel-maker.jpg`,
+    featured: true,
+  },
+  {
     title: "ParkPass",
     kind: "Real-time booking platform",
     description:

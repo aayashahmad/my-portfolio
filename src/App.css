@@ -388,6 +388,21 @@ body::before {
   display: none;
 }
 
+.nav__motion {
+  gap: 8px;
+  padding: 0 14px;
+  color: var(--text-muted);
+}
+
+.nav__motion:hover {
+  color: var(--text);
+}
+
+.nav__motion i {
+  color: var(--accent);
+  font-size: 13px;
+}
+
 /* ============ Hero ============ */
 .hero {
   position: relative;
@@ -1492,6 +1507,15 @@ body::before {
   }
 
   .nav__cta {
+    display: none;
+  }
+
+  .nav__motion {
+    width: 38px;
+    padding: 0;
+  }
+
+  .nav__motion-label {
     display: none;
   }
 

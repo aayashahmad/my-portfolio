@@ -37,6 +37,18 @@ export default function Navbar({ theme, onToggleTheme }) {
     return () => observer.disconnect();
   }, []);
 
+  // The swarm engine is only downloaded the first time someone presses Motion.
+  const playMotion = async (e) => {
+    const button = e.currentTarget;
+    const menuWasOpen = open;
+    setOpen(false);
+    const [{ runSwarm }] = await Promise.all([
+      import("./swarm/swarm"),
+      new Promise((r) => setTimeout(r, menuWasOpen ? 350 : 0)), // let the mobile menu close first
+    ]);
+    runSwarm({ returnFocus: button });
+  };
+
   return (
     <header className={`nav ${scrolled ? "nav--scrolled" : ""}`}>
       <div className="nav__inner container">
@@ -59,6 +71,16 @@ export default function Navbar({ theme, onToggleTheme }) {
         </nav>
 
         <div className="nav__actions">
+          <button
+            type="button"
+            className="btn btn--ghost btn--sm nav__motion"
+            onClick={playMotion}
+            aria-label="Motion: watch this page get rebuilt by a swarm of cursors"
+            title="Watch this page get rebuilt"
+          >
+            <i className="fas fa-wand-magic-sparkles" aria-hidden="true" />
+            <span className="nav__motion-label">Motion</span>
+          </button>
           <button className="icon-btn" onClick={onToggleTheme} aria-label="Toggle color theme">
             <i className={theme === "dark" ? "fas fa-sun" : "fas fa-moon"} />
           </button>
